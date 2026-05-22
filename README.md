@@ -4,8 +4,8 @@ Lab Android (Java) : application **BibliothequeApp**.
 
 ## Labs
 
-| Lab | Thème | Statut dans le code |
-|-----|-------|-------------------|
+| Lab | Objectif | 
+|-----|-------|
 | 1 | Installation Android Studio / SDK / émulateur | 
 | 2 | Structure projet Android | 
 | 3 | Écran d'accueil (TextView, ImageView, Button) |
