@@ -51,6 +51,7 @@ public class AddEditActivity extends AppCompatActivity {
 
         if (MODE_EDIT.equals(mode)) {
             tvTitreFormulaire.setText("Modifier le livre");
+
             livreAModifier = (Livre) intent.getSerializableExtra(EXTRA_LIVRE);
 
             if (livreAModifier != null) {
@@ -59,6 +60,7 @@ public class AddEditActivity extends AppCompatActivity {
                 etIsbn.setText(livreAModifier.getIsbn());
                 switchDisponible.setChecked(livreAModifier.isDisponible());
             }
+
         } else {
             mode = MODE_ADD;
             tvTitreFormulaire.setText("Ajouter un livre");
@@ -78,6 +80,7 @@ public class AddEditActivity extends AppCompatActivity {
         }
 
         Livre livre;
+
         if (MODE_EDIT.equals(mode) && livreAModifier != null) {
             livre = new Livre(
                     livreAModifier.getId(),
@@ -87,12 +90,19 @@ public class AddEditActivity extends AppCompatActivity {
                     disponible
             );
         } else {
-            livre = new Livre(0, titre, auteur, isbn, disponible);
+            livre = new Livre(
+                    0,
+                    titre,
+                    auteur,
+                    isbn,
+                    disponible
+            );
         }
 
         Intent resultIntent = new Intent();
         resultIntent.putExtra(EXTRA_MODE, mode);
         resultIntent.putExtra(EXTRA_LIVRE, livre);
+
         setResult(RESULT_OK, resultIntent);
         finish();
     }

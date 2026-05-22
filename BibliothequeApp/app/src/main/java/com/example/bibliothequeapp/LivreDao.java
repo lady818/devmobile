@@ -23,9 +23,6 @@ public interface LivreDao {
     @Query("SELECT * FROM livres ORDER BY id DESC")
     List<Livre> getAllLivres();
 
-    @Query("SELECT COUNT(*) FROM livres")
-    int countLivres();
-
     @Query("DELETE FROM livres")
     void deleteAll();
 }

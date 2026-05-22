@@ -8,20 +8,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BibliothequeApp">
+
+        <!-- Lab 3 : écran d'accueil (point d'entrée) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Labs 4 à 7 : liste des livres -->
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".WelcomeActivity" />
+
+        <!-- Lab 5 -->
         <activity
             android:name=".DetailActivity"
             android:parentActivityName=".MainActivity" />
+
+        <!-- Labs 6 et 7 -->
         <activity
             android:name=".AddEditActivity"
             android:parentActivityName=".MainActivity" />
+
     </application>
 
 </manifest>

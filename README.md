@@ -1,46 +1,48 @@
-# Développement Mobile 
+# Développement Mobile — Pr. Ibrahima FALL (ESP)
 
-Lab Android (Java) : application **BibliothequeApp**.
+Application **BibliothequeApp** (Java) — labs Android 1 à 7.
 
-## Labs
+Dépôt GitHub : [lady818/devmobile](https://github.com/lady818/devmobile)
 
-| Lab | Objectif | 
-|-----|-------|
-| 1 | Installation Android Studio / SDK / émulateur | 
-| 2 | Structure projet Android | 
+## Structure
+
+| Dossier | Contenu |
+|---------|---------|
+| `BibliothequeApp/` | Projet Android Studio |
+| `labs/` | Énoncés PDF (labs 1–7) |
+| `rendus/` | Tableau de conformité par lab |
+
+| Lab | Objectif |
+|-----|----------|
+| 1 | Installation Android Studio / SDK / émulateur |
+| 2 | Structure projet Android |
 | 3 | Écran d'accueil (TextView, ImageView, Button) |
-| 4 | Liste de livres avec RecyclerView | 
+| 4 | Liste de livres avec RecyclerView |
 | 5 | Navigation + fiche détail |
-| 6 | Formulaire ajout / modification | 
-| 7 | Persistance Room | 
+| 6 | Formulaire ajout / modification |
+| 7 | Persistance Room |
 
-## Fonctionnalités de l'application
+## Progression (comme les TP)
 
-- Liste des livres (RecyclerView + CardView)
-- Clic sur un livre → fiche détail
-- Clic long → modifier ou supprimer
-- Bouton flottant **+** → ajouter un livre
-- Validation du formulaire (champs obligatoires, ISBN ≥ 10 caractères)
-- Données persistées avec **Room** (conservées après fermeture de l'app)
-- 8 livres de démonstration insérés au premier lancement
+1. **Lab 3** — `WelcomeActivity` : bienvenue, logo, bouton, **Toast**.
+2. **Lab 4** — Liste de livres (`RecyclerView`, `Livre`, `LivreAdapter`).
+3. **Lab 5** — `DetailActivity` + passage du livre par `Intent` / `Serializable`.
+4. **Lab 6** — `AddEditActivity` + FAB + validation du formulaire.
+5. **Lab 7** — **Room** (persistance), `ActivityResultLauncher`, suppression au clic long.
 
-## Ouvrir le projet
+Au lancement : écran d'accueil (Lab 3) → liste (Labs 4–7).
 
-1. Installer [Android Studio](https://developer.android.com/studio) (via JetBrains Toolbox si demandé en lab 1).
-2. Ouvrir le dossier `BibliothequeApp/`.
-3. Laisser Gradle synchroniser (Sync Now).
-4. Lancer sur un émulateur ou un téléphone (API 24+).
+## Ouvrir et exécuter
 
-## Compiler en ligne de commande
+1. Android Studio → **Open** → dossier `BibliothequeApp`.
+2. **Sync Gradle**, puis **Run** (émulateur ou téléphone, API 24+).
 
-```bat
-cd BibliothequeApp
-gradlew.bat assembleDebug
-```
+## Technologies
 
-L'APK se trouve dans `app/build/outputs/apk/debug/`.
-
+- Java, Android SDK 35, min SDK 24
+- RecyclerView, CardView, Material FAB
+- Room 2.8.4
 
 ## Auteur
-Mame Sadio Guisse 
-Travail réalisé dans le cadre du module Développement Mobile — L2.
+
+Mame Sadio Guisse — Travail réalisé dans le cadre du module Développement Mobile — L2.

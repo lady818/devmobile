@@ -1,6 +1,5 @@
 package com.example.bibliothequeapp;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -35,10 +34,8 @@ public class DetailActivity extends AppCompatActivity {
 
             if (livre.isDisponible()) {
                 tvDisponibilite.setText("Disponible");
-                tvDisponibilite.setTextColor(Color.parseColor("#2E7D32"));
             } else {
                 tvDisponibilite.setText("Indisponible");
-                tvDisponibilite.setTextColor(Color.parseColor("#C62828"));
             }
         }
     }

@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+
                         Intent data = result.getData();
 
                         Livre livre = (Livre) data.getSerializableExtra(AddEditActivity.EXTRA_LIVRE);
@@ -92,10 +93,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void chargerLivresDepuisRoom() {
         executorService.execute(() -> {
-            if (database.livreDao().countLivres() == 0) {
-                insererLivresInitiaux();
-            }
-
             List<Livre> livresDepuisBase = database.livreDao().getAllLivres();
 
             runOnUiThread(() -> {
@@ -104,17 +101,6 @@ public class MainActivity extends AppCompatActivity {
                 livreAdapter.notifyDataSetChanged();
             });
         });
-    }
-
-    private void insererLivresInitiaux() {
-        database.livreDao().insert(new Livre(0, "Le Petit Prince", "Antoine de Saint-Exupéry", "9780156013987", true));
-        database.livreDao().insert(new Livre(0, "L'Étranger", "Albert Camus", "9782070360024", false));
-        database.livreDao().insert(new Livre(0, "Les Misérables", "Victor Hugo", "9782253096344", true));
-        database.livreDao().insert(new Livre(0, "Une si longue lettre", "Mariama Bâ", "9782841290529", true));
-        database.livreDao().insert(new Livre(0, "Le Vieux Nègre et la Médaille", "Ferdinand Oyono", "9782264018304", false));
-        database.livreDao().insert(new Livre(0, "Madame Bovary", "Gustave Flaubert", "9782070409228", true));
-        database.livreDao().insert(new Livre(0, "La Peste", "Albert Camus", "9782070360420", false));
-        database.livreDao().insert(new Livre(0, "Sous l'orage", "Seydou Badian", "9782708707691", true));
     }
 
     private void ajouterLivreDansRoom(Livre livre) {
@@ -154,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
     private void ouvrirFormulaireAjout() {
         Intent intent = new Intent(MainActivity.this, AddEditActivity.class);
         intent.putExtra(AddEditActivity.EXTRA_MODE, AddEditActivity.MODE_ADD);
+
         addEditLauncher.launch(intent);
     }
 
@@ -161,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, AddEditActivity.class);
         intent.putExtra(AddEditActivity.EXTRA_MODE, AddEditActivity.MODE_EDIT);
         intent.putExtra(AddEditActivity.EXTRA_LIVRE, livre);
+
         addEditLauncher.launch(intent);
     }
 
@@ -173,22 +161,23 @@ public class MainActivity extends AppCompatActivity {
     private void afficherOptionsLivre(Livre livre) {
         String[] options = {"Modifier", "Supprimer"};
 
-        new AlertDialog.Builder(this)
-                .setTitle(livre.getTitre())
-                .setItems(options, (dialog, which) -> {
-                    if (which == 0) {
-                        ouvrirFormulaireModification(livre);
-                    } else if (which == 1) {
-                        confirmerSuppression(livre);
-                    }
-                })
-                .show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(livre.getTitre());
+        builder.setItems(options, (dialog, which) -> {
+            if (which == 0) {
+                ouvrirFormulaireModification(livre);
+            } else if (which == 1) {
+                confirmerSuppression(livre);
+            }
+        });
+
+        builder.show();
     }
 
     private void confirmerSuppression(Livre livre) {
         new AlertDialog.Builder(this)
                 .setTitle("Supprimer le livre")
-                .setMessage("Voulez-vous vraiment supprimer ce livre ?")
+                .setMessage("Voulez-vous vraiment supprimer ce livre?")
                 .setPositiveButton("Supprimer", (dialog, which) -> supprimerLivreDansRoom(livre))
                 .setNegativeButton("Annuler", null)
                 .show();
@@ -197,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
         if (executorService != null) {
             executorService.shutdown();
         }

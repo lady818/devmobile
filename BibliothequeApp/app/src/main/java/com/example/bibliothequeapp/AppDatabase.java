@@ -22,7 +22,6 @@ public abstract class AppDatabase extends RoomDatabase {
                                     AppDatabase.class,
                                     "bibliotheque_database"
                             )
-                            .fallbackToDestructiveMigration()
                             .build();
                 }
             }
