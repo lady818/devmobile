@@ -8,11 +8,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * Lab 3 — Écran d'accueil (TP Pr. FALL).
- * Clic sur le bouton : Toast « Accès à la liste des livres ».
- * Puis ouverture de la liste (transition Lab 4 : écran principal = liste).
- */
 public class WelcomeActivity extends AppCompatActivity {
 
     @Override
