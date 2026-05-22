@@ -1,6 +1,6 @@
-# Développement Mobile — Pr. Ibrahima FALL (ESP)
+# Développement Mobile 
 
-Application **BibliothequeApp** (Java) — labs Android 1 à 7.
+Application **BibliothequeApp**  — labs Android 1 à 7.
 
 Dépôt GitHub : [lady818/devmobile](https://github.com/lady818/devmobile)
 
@@ -33,5 +33,6 @@ Au lancement : écran d'accueil (Lab 3) → liste (Labs 4–7).
 
 ## Auteur
 
-Mame Sadio Guisse 
+Mame Sadio Guisse.
+
 Travail réalisé dans le cadre du module Développement Mobile — L2.
