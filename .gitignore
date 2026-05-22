@@ -1,0 +1,24 @@
+# Android / Gradle
+*.iml
+.gradle/
+build/
+**/build/
+local.properties
+.cxx/
+.externalNativeBuild/
+captures/
+*.apk
+*.ap_
+*.aab
+
+# Android Studio
+.idea/
+*.hprof
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires d'extraction PDF
+labs/*.txt
+labs/ALL_LABS_SUMMARY.md

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BibliothequeApp</string>
+    <string name="liste_livres">Liste des livres</string>
+    <string name="ajouter_livre">Ajouter un livre</string>
+    <string name="titre_livre">Titre du livre</string>
+    <string name="auteur">Auteur</string>
+    <string name="isbn">ISBN</string>
+    <string name="livre_disponible">Livre disponible</string>
+    <string name="enregistrer">Enregistrer</string>
+</resources>
