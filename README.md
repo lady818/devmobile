@@ -4,13 +4,6 @@ Application **BibliothequeApp** (Java) — labs Android 1 à 7.
 
 Dépôt GitHub : [lady818/devmobile](https://github.com/lady818/devmobile)
 
-## Structure
-
-| Dossier | Contenu |
-|---------|---------|
-| `BibliothequeApp/` | Projet Android Studio |
-| `labs/` | Énoncés PDF (labs 1–7) |
-| `rendus/` | Tableau de conformité par lab |
 
 | Lab | Objectif |
 |-----|----------|
@@ -22,7 +15,7 @@ Dépôt GitHub : [lady818/devmobile](https://github.com/lady818/devmobile)
 | 6 | Formulaire ajout / modification |
 | 7 | Persistance Room |
 
-## Progression (comme les TP)
+## Progression 
 
 1. **Lab 3** — `WelcomeActivity` : bienvenue, logo, bouton, **Toast**.
 2. **Lab 4** — Liste de livres (`RecyclerView`, `Livre`, `LivreAdapter`).
@@ -37,12 +30,8 @@ Au lancement : écran d'accueil (Lab 3) → liste (Labs 4–7).
 1. Android Studio → **Open** → dossier `BibliothequeApp`.
 2. **Sync Gradle**, puis **Run** (émulateur ou téléphone, API 24+).
 
-## Technologies
-
-- Java, Android SDK 35, min SDK 24
-- RecyclerView, CardView, Material FAB
-- Room 2.8.4
 
 ## Auteur
 
-Mame Sadio Guisse — Travail réalisé dans le cadre du module Développement Mobile — L2.
+Mame Sadio Guisse 
+Travail réalisé dans le cadre du module Développement Mobile — L2.
