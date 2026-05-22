@@ -1,25 +1,18 @@
-# Développement Mobile — Pr. Ibrahima FALL (ESP)
+# Développement Mobile 
 
-Projet de laboratoires Android (Java) : application **BibliothequeApp**.
-
-## Structure du dépôt
-
-| Dossier / fichier | Contenu |
-|-------------------|---------|
-| `labs/` | Énoncés PDF des labs 1 à 7 |
-| `BibliothequeApp/` | Projet Android Studio (code source) |
+Lab Android (Java) : application **BibliothequeApp**.
 
 ## Labs
 
 | Lab | Thème | Statut dans le code |
 |-----|-------|-------------------|
-| 1 | Installation Android Studio / SDK / émulateur | Configuration locale (pas de code) |
-| 2 | Structure projet Android | Documentation |
-| 3 | Écran d'accueil (TextView, ImageView, Button) | Intégré dans l'évolution du projet |
-| 4 | Liste de livres avec RecyclerView | `Livre`, `LivreAdapter`, `item_livre.xml` |
-| 5 | Navigation + fiche détail | `DetailActivity` |
-| 6 | Formulaire ajout / modification | `AddEditActivity`, FAB |
-| 7 | Persistance Room | `AppDatabase`, `LivreDao`, SQLite |
+| 1 | Installation Android Studio / SDK / émulateur | 
+| 2 | Structure projet Android | 
+| 3 | Écran d'accueil (TextView, ImageView, Button) |
+| 4 | Liste de livres avec RecyclerView | 
+| 5 | Navigation + fiche détail |
+| 6 | Formulaire ajout / modification | 
+| 7 | Persistance Room | 
 
 ## Fonctionnalités de l'application
 
@@ -47,13 +40,7 @@ gradlew.bat assembleDebug
 
 L'APK se trouve dans `app/build/outputs/apk/debug/`.
 
-## Technologies
-
-- Java 17
-- Android SDK 35 (min SDK 24)
-- RecyclerView, CardView, Material FAB
-- Room 2.8.4
 
 ## Auteur
-
+Mame Sadio Guisse 
 Travail réalisé dans le cadre du module Développement Mobile — L2.
